@@ -21,15 +21,15 @@ import { isDark } from '~/logics'
         </router-link>
         <router-link to="/posts" title="Posts">
           <span class="lt-md:hidden">Posts</span>
-          <div i-carbon-load-balancer-network md:hidden />
+          <div i-ri-article-line md:hidden />
         </router-link>
         <router-link to="/security" title="Security">
           <span class="lt-md:hidden">Security</span>
-          <div i-carbon-cognitive md:hidden />
+          <div i-carbon-security md:hidden />
         </router-link>
-        <router-link to="/resource" title="Resource">
-          <span class="lt-md:hidden">Resource</span>
-          <div i-carbon-license-third-party-draft md:hidden />
+        <router-link to="/resources" title="Resources">
+          <span class="lt-md:hidden">Resources</span>
+          <div i-ep-collection md:hidden />
         </router-link>
         <a href="https://github.com/danielzhang183/dz-http" target="_blank" title="GitHub" class="lt-md:hidden">
           <div i-uil-github-alt />

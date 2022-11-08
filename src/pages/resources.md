@@ -19,6 +19,16 @@ resources:
       link: 'https://github.com/Alice52/common-http/files/9137762/HTTP-.pdf'
       desc: 'Time traveling for the Web'
       icon: 'i-bi-book'
+
+  Videos:
+    - name: 'How the network work？'
+      link: 'https://b23.tv/EE8gYje'
+      desc: 'Time traveling for the Web'
+      icon: 'i-ri-movie-line'
+    - name: 'How the browser work？'
+      link: 'https://b23.tv/Y61ZwnV'
+      desc: 'Time traveling for the Web'
+      icon: 'i-ri-movie-line'
 ---
 
 <ListResources :resources="frontmatter.resources" />

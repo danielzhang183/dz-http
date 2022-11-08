@@ -12,7 +12,7 @@ members:
         link: https://github.com/danielzhang183
       - icon: i-mdi-gmail
         link: mailto:danielzhang182@gmail.com
-  - avatar: https://avatars.githubusercontent.com/u/42330329?s=400v=4
+  - avatar: https://avatars.githubusercontent.com/u/42330329?s=40v=4
     name: Zack Zhang
     title: 'A full stack coder & Developer'
     links:
