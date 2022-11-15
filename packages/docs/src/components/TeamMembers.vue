@@ -5,15 +5,15 @@ const props = defineProps<{
   members?: Member[]
 }>()
 
-const isIcon = (str: string) => /^i-/.test(str)
+const isIcon = (str: string) => str.startsWith('i-')
 console.log(props.members)
 </script>
 
 <template>
   <div class="member-container">
     <article
-      v-if="members && members.length"
       v-for="member in members"
+      v-if="members && members.length"
       :key="member.name"
       flex-col rounded-3 bg-truegray-50 dark:bg-dark-800
     >
@@ -26,18 +26,22 @@ console.log(props.members)
         </figure>
 
         <div pt-5 text-center>
-          <div font-bold text-base>{{ member.name }}</div>
-          <div text-sm font-normal opacity-50>{{ member.title }}</div>
+          <div font-bold text-base>
+            {{ member.name }}
+          </div>
+          <div text-sm font-normal opacity-50>
+            {{ member.title }}
+          </div>
           <div flex justify-center items-center gap2 pt-2>
             <a
-              :href="item.link"
               v-for="item in member.links"
               :key="item.link"
+              :href="item.link"
               target="_blank"
             >
               <div v-if="isIcon(item.icon)" :class="item.icon" />
               <img v-else :src="item.icon">
-             </a>
+            </a>
           </div>
         </div>
       </div>

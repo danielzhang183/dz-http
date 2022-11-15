@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { DocItem } from 'types'
-import { resourceIndex } from 'data/resource-index'
+import { default as resourceIndex } from '../../data/resource-index.json'
 import { capitalize } from '~/logics'
 
 interface ResolveDocItem extends DocItem {
@@ -32,7 +32,7 @@ function normalizeResources(resources: DocItem[]): Record<string, ResolveDocItem
   return map
 }
 
-const resources = computed(() => props.resources || normalizeResources(resourceIndex.value))
+const resources = computed(() => props.resources || normalizeResources(resourceIndex as DocItem[]))
 </script>
 
 <template>

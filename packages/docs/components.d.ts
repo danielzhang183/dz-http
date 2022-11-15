@@ -8,9 +8,13 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AppLink: typeof import('./src/components/AppLink.vue')['default']
+    DetailResult: typeof import('./src/components/DetailResult.vue')['default']
+    DetailsResult: typeof import('./src/components/DetailsResult.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
+    Interactive: typeof import('./src/components/Interactive.vue')['default']
     ListPosts: typeof import('./src/components/ListPosts.vue')['default']
     ListResources: typeof import('./src/components/ListResources.vue')['default']
+    Modal: typeof import('./src/components/Modal.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
     Plum: typeof import('./src/components/Plum.vue')['default']
     Post: typeof import('./src/components/Post.vue')['default']
@@ -18,6 +22,7 @@ declare module '@vue/runtime-core' {
     RiSunLine: typeof import('~icons/ri/sun-line')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Search: typeof import('./src/components/Search.vue')['default']
     SubNav: typeof import('./src/components/SubNav.vue')['default']
     TeamMembers: typeof import('./src/components/TeamMembers.vue')['default']
     ToggleTheme: typeof import('./src/components/ToggleTheme.vue')['default']
