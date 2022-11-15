@@ -1,0 +1,1507 @@
+[
+  {
+    "title": "HTTP response status codes",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status",
+    "summary": "HTTP response status codes indicate whether a specific HTTP request has been successfully completed.\n  Responses are grouped in five classes:"
+  },
+  {
+    "title": "Content Security Policy",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP",
+    "summary": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks,\n  including Cross-Site Scripting (XSS) and data injection attacks.\n  These attacks are used for everything from data theft, to site defacement, to malware distribution."
+  },
+  {
+    "title": "Cross-Origin Resource Sharing",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS",
+    "summary": "Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a \"preflight\" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request."
+  },
+  {
+    "title": "MIME types",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types",
+    "summary": "A media type (also known as a Multipurpose Internet Mail Extensions or MIME type) indicates the nature and format of a document, file, or assortment of bytes.\n  MIME types are defined and standardized in IETF's RFC 6838."
+  },
+  {
+    "title": "HTTP headers",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers",
+    "summary": "HTTP headers let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (:), then by its value. Whitespace before the value is ignored."
+  },
+  {
+    "title": "403 Forbidden",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+    "summary": "The HTTP 403 Forbidden response status code indicates that the server understands the request but refuses to authorize it."
+  },
+  {
+    "title": "500 Internal Server Error",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500",
+    "summary": "The HyperText Transfer Protocol (HTTP) 500 Internal Server Error server error response code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request."
+  },
+  {
+    "title": "400 Bad Request",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400",
+    "summary": "The HyperText Transfer Protocol (HTTP) 400 Bad Request response status code indicates that the server cannot or will not process the request due to something that is perceived to be a client error (for example, malformed request syntax, invalid request message framing, or deceptive request routing)."
+  },
+  {
+    "title": "503 Service Unavailable",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503",
+    "summary": "The HyperText Transfer Protocol (HTTP) 503 Service Unavailable server error response code indicates that the server is not ready to handle the request."
+  },
+  {
+    "title": "GET",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET",
+    "summary": "The HTTP GET method requests a representation of the specified resource. Requests using GET should only be used to request data (they shouldn't include data)."
+  },
+  {
+    "title": "DELETE",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/DELETE",
+    "summary": "The HTTP DELETE request method deletes the specified\n  resource."
+  },
+  {
+    "title": "PATCH",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PATCH",
+    "summary": "The HTTP PATCH request method applies partial modifications to a resource."
+  },
+  {
+    "title": "PUT",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT",
+    "summary": "The HTTP PUT request method creates a new resource or replaces a representation of the target resource with the request payload."
+  },
+  {
+    "title": "POST",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST",
+    "summary": "The HTTP POST method sends data to the server. The type of the body of the request is indicated by the Content-Type header."
+  },
+  {
+    "title": "Reason: CORS header 'Access-Control-Allow-Origin' missing",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin",
+    "summary": "The response to the CORS request is missing the required\n  Access-Control-Allow-Origin header, which is used to determine whether\n  or not the resource can be accessed by content operating within the current origin."
+  },
+  {
+    "title": "HTTP request methods",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods",
+    "summary": "HTTP defines a set of request methods to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred to as HTTP verbs. Each of them implements a different semantic, but some common features are shared by a group of them: e.g. a request method can be safe, idempotent, or cacheable."
+  },
+  {
+    "title": "404 Not Found",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
+    "summary": "The HTTP 404 Not Found response status code indicates that the server cannot find the requested resource.\n  Links that lead to a 404 page are often called broken or dead links and can be subject to link rot."
+  },
+  {
+    "title": "Common MIME types",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types",
+    "summary": "This topic lists most common MIME types, with corresponding document types, ordered by their common extensions."
+  },
+  {
+    "title": "Content-Type",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type",
+    "summary": "The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending)."
+  },
+  {
+    "title": "Using HTTP cookies",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies",
+    "summary": "An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to a user's web browser.\n  The browser may store the cookie and send it back to the same server with later requests.\n  Typically, an HTTP cookie is used to tell if two requests come from the same browser—keeping a user logged in, for example. It remembers stateful information for the stateless HTTP protocol."
+  },
+  {
+    "title": "502 Bad Gateway",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502",
+    "summary": "The HyperText Transfer Protocol (HTTP) 502 Bad Gateway server error response code indicates that the server, while acting as a gateway or proxy, received an invalid response from the upstream server."
+  },
+  {
+    "title": "401 Unauthorized",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401",
+    "summary": "The HyperText Transfer Protocol (HTTP) 401 Unauthorized response status code indicates that the client request has not been\n  completed because it lacks valid authentication credentials for the requested resource."
+  },
+  {
+    "title": "An overview of HTTP",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview",
+    "summary": "HTTP is a protocol for fetching resources such as HTML documents.\n  It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser.\n  A complete document is reconstructed from the different sub-documents fetched, for instance, text, layout description, images, videos, scripts, and more."
+  },
+  {
+    "title": "Access-Control-Allow-Origin",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin",
+    "summary": "The Access-Control-Allow-Origin response header indicates whether the response can be shared with requesting code from the given origin."
+  },
+  {
+    "title": "X-Frame-Options",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options",
+    "summary": "The X-Frame-Options HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <frame>, <iframe>, <embed> or <object>. Sites can use this to avoid click-jacking attacks, by ensuring that their content is not embedded into other sites."
+  },
+  {
+    "title": "Cache-Control",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control",
+    "summary": "The Cache-Control HTTP header field holds directives (instructions) — in both requests and responses — that control caching in browsers and shared caches (e.g. Proxies, CDNs)."
+  },
+  {
+    "title": "Strict-Transport-Security",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security",
+    "summary": "The HTTP Strict-Transport-Security response header (often abbreviated as HSTS) informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS."
+  },
+  {
+    "title": "User-Agent",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent",
+    "summary": "The User-Agent request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent."
+  },
+  {
+    "title": "405 Method Not Allowed",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405",
+    "summary": "The HyperText Transfer Protocol (HTTP) 405 Method Not Allowed response status code indicates that the server knows the request method, but the target resource doesn't support this method."
+  },
+  {
+    "title": "Content-Security-Policy",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy",
+    "summary": "The HTTP Content-Security-Policy response header allows\n  web site administrators to control resources the user agent is allowed to load for a\n  given page. With a few exceptions, policies mostly involve specifying server origins and\n  script endpoints. This helps guard against cross-site scripting attacks\n  (Cross-site_scripting)."
+  },
+  {
+    "title": "Set-Cookie",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie",
+    "summary": "The Set-Cookie HTTP response header is used to send a cookie from the server to the user agent, so that the user agent can send it back to the server later.\n  To send multiple cookies, multiple Set-Cookie headers should be sent in the same response."
+  },
+  {
+    "title": "302 Found",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302",
+    "summary": "The HyperText Transfer Protocol (HTTP) 302 Found redirect\n  status response code indicates that the resource requested has been temporarily moved to\n  the URL given by the Location header. A browser redirects to this page\n  but search engines don't update their links to the resource (in 'SEO-speak', it is said\n  that the 'link-juice' is not sent to the new URL)."
+  },
+  {
+    "title": "SameSite cookies",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite",
+    "summary": "The SameSite attribute of the Set-Cookie HTTP response header allows you to declare if your cookie should be restricted to a first-party or same-site context."
+  },
+  {
+    "title": "HTTP authentication",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication",
+    "summary": "HTTP provides a general framework for access control and authentication.\n  This page is an introduction to the HTTP framework for authentication, and shows how to restrict access to your server using the HTTP \"Basic\" schema."
+  },
+  {
+    "title": "422 Unprocessable Entity",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422",
+    "summary": "The HyperText Transfer Protocol (HTTP)\n  422 Unprocessable Entity response status code indicates\n  that the server understands the content type of the request entity, and the syntax of\n  the request entity is correct, but it was unable to process the contained instructions."
+  },
+  {
+    "title": "504 Gateway Timeout",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504",
+    "summary": "The HyperText Transfer Protocol (HTTP) 504 Gateway Timeout server error response code indicates that the server, while acting as a gateway or proxy, did not get a response in time from the upstream server that it needed in order to complete the request."
+  },
+  {
+    "title": "X-Content-Type-Options",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options",
+    "summary": "The X-Content-Type-Options response HTTP header is a\n  marker used by the server to indicate that the MIME types advertised in the\n  Content-Type headers should be followed and not be changed. The header allows you to avoid MIME type sniffing by saying that the MIME types are deliberately\n  configured."
+  },
+  {
+    "title": "418 I'm a teapot",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418",
+    "summary": "The HTTP 418 I'm a teapot client error response code indicates that the server refuses to brew coffee because it is, permanently, a teapot. A combined coffee/tea pot that is temporarily out of coffee should instead return 503. This error is a reference to Hyper Text Coffee Pot Control Protocol defined in April Fools' jokes in 1998 and 2014."
+  },
+  {
+    "title": "429 Too Many Requests",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+    "summary": "The HTTP 429 Too Many Requests response status code indicates the user has sent too many requests in a given amount of time (\"rate limiting\")."
+  },
+  {
+    "title": "Authorization",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization",
+    "summary": "The HTTP Authorization request header can be used to provide credentials that authenticate a user agent with a server, allowing access to a protected resource."
+  },
+  {
+    "title": "CORS errors",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors",
+    "summary": "Cross-Origin Resource Sharing (CORS) is a standard that allows a server to relax the same-origin policy. This is used to explicitly allow some cross-origin requests while rejecting others. For example, if a site offers an embeddable service, it may be necessary to relax certain restrictions. Setting up such a CORS configuration isn't necessarily easy and may present some challenges. In these pages, we'll look into some common CORS error messages and how to resolve them."
+  },
+  {
+    "title": "415 Unsupported Media Type",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/415",
+    "summary": "The HTTP 415 Unsupported Media Type client error response\n  code indicates that the server refuses to accept the request because the payload format\n  is in an unsupported format."
+  },
+  {
+    "title": "204 No Content",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/204",
+    "summary": "The HTTP 204 No Content success status response code\n  indicates that a request has succeeded, but that the client doesn't need to navigate away\n  from its current page."
+  },
+  {
+    "title": "Reason: CORS request did not succeed",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed",
+    "summary": "The HTTP request which makes use of CORS failed because the HTTP\n  connection failed at either the network or protocol level. The error is not directly\n  related to CORS, but is a fundamental network error of some kind."
+  },
+  {
+    "title": "304 Not Modified",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304",
+    "summary": "The HTTP 304 Not Modified client redirection response\n  code indicates that there is no need to retransmit the requested resources. It is an\n  implicit redirection to a cached resource. This happens when the request method is\n  a safe method, such as GET or HEAD,\n  or when the request is conditional and uses an If-None-Match or an\n  If-Modified-Since header."
+  },
+  {
+    "title": "Content-Disposition",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition",
+    "summary": "In a regular HTTP response, the Content-Disposition response header is a header indicating if the content is expected to be displayed inline in the browser, that is, as a Web page or as part of a Web page, or as an attachment, that is downloaded and saved locally."
+  },
+  {
+    "title": "Data URLs",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs",
+    "summary": "Data URLs, URLs prefixed with the data: scheme, allow content creators to embed small files inline in documents. They were formerly known as \"data URIs\" until that name was retired by the WHATWG."
+  },
+  {
+    "title": "Referrer-Policy",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy",
+    "summary": "The Referrer-Policy HTTP header controls how much referrer information (sent with the Referer header) should be included with requests. Aside from the HTTP header, you can set this policy in HTML."
+  },
+  {
+    "title": "200 OK",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200",
+    "summary": "The HTTP 200 OK success status response code indicates that the request has succeeded. A 200 response is cacheable by default."
+  },
+  {
+    "title": "Referer",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer",
+    "summary": "The Referer HTTP request header contains the absolute or partial address from which a resource has been requested.\n  The Referer header allows a server to identify referring pages that people are visiting from or where requested resources are being used.\n  This data can be used for analytics, logging, optimized caching, and more."
+  },
+  {
+    "title": "409 Conflict",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409",
+    "summary": "The HTTP 409 Conflict response status code indicates a request conflict with the current state of the target resource."
+  },
+  {
+    "title": "X-Forwarded-For",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For",
+    "summary": "The X-Forwarded-For (XFF) request header is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through a proxy server."
+  },
+  {
+    "title": "301 Moved Permanently",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/301",
+    "summary": "The HyperText Transfer Protocol (HTTP) 301 Moved Permanently redirect status response code indicates that the requested resource has been definitively moved to the URL given by the Location headers. A browser redirects to the new URL and search engines update their links to the resource."
+  },
+  {
+    "title": "Redirections in HTTP",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections",
+    "summary": "URL redirection, also known as URL forwarding, is a technique to give more than one URL address to a page, a form, or a whole Web site/application. HTTP has a special kind of response, called a HTTP redirect, for this operation."
+  },
+  {
+    "title": "CSP: frame-ancestors",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors",
+    "summary": "The HTTP Content-Security-Policy (CSP) frame-ancestors directive specifies valid parents that may embed a page using <frame>, <iframe>, <object>, <embed>, or <applet>."
+  },
+  {
+    "title": "HTTP Messages",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages",
+    "summary": "HTTP messages are how data is exchanged between a server and a client. There are two types of messages: requests sent by the client to trigger an action on the server, and responses, the answer from the server."
+  },
+  {
+    "title": "CSP: script-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src",
+    "summary": "The HTTP Content-Security-Policy (CSP) script-src directive specifies valid sources for JavaScript. This includes not only URLs loaded directly into <script> elements, but also things like inline script event handlers (onclick) and XSLT stylesheets which can trigger script execution."
+  },
+  {
+    "title": "HTTP caching",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching",
+    "summary": "The HTTP cache stores a response associated with a request and reuses the stored response for subsequent requests."
+  },
+  {
+    "title": "Keep-Alive",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Keep-Alive",
+    "summary": "The Keep-Alive general header allows the sender to hint about how the connection may be used to set a timeout and a maximum amount of requests."
+  },
+  {
+    "title": "Evolution of HTTP",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP",
+    "summary": "HTTP (HyperText Transfer Protocol) is the underlying protocol of the World Wide Web. Developed by Tim Berners-Lee and his team between 1989-1991, HTTP has gone through many changes that have helped maintain its simplicity while shaping its flexibility. Keep reading to learn how HTTP evolved from a protocol designed to exchange files in a semitrusted laboratory environment into a modern internet maze that carries images and videos in high resolution and 3D."
+  },
+  {
+    "title": "X-XSS-Protection",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection",
+    "summary": "The HTTP X-XSS-Protection response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. These protections are largely unnecessary in modern browsers when sites implement a strong Content-Security-Policy that disables the use of inline JavaScript ('unsafe-inline')."
+  },
+  {
+    "title": "Access-Control-Allow-Headers",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers",
+    "summary": "The Access-Control-Allow-Headers response header is used in response to a preflight request which includes the Access-Control-Request-Headers to indicate which HTTP headers can be used during the actual request."
+  },
+  {
+    "title": "OPTIONS",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS",
+    "summary": "The HTTP OPTIONS method requests permitted communication options for a given URL or server. A client can specify a URL with this method, or an asterisk (*) to refer to the entire server."
+  },
+  {
+    "title": "Browser detection using the user agent",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent",
+    "summary": "Serving different Web pages or services to different browsers is usually a bad idea. The Web is meant to be accessible to everyone, regardless of which browser or device they're using. There are ways to develop your website to progressively enhance itself based on the availability of features rather than by targeting specific browsers."
+  },
+  {
+    "title": "406 Not Acceptable",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",
+    "summary": "The HyperText Transfer Protocol (HTTP) 406 Not Acceptable\n  client error response code indicates that the server cannot produce a response matching\n  the list of acceptable values defined in the request's proactive content negotiation headers, and\n  that the server is unwilling to supply a default representation."
+  },
+  {
+    "title": "Accept",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept",
+    "summary": "The Accept request HTTP header indicates which content types, expressed as MIME types, the client is able to understand. The server uses content negotiation to select one of the proposals and informs the client of the choice with the Content-Type response header. Browsers set required values for this header based on the context of the request. For example, a browser uses different values in a request when fetching a CSS stylesheet, image, video, or a script."
+  },
+  {
+    "title": "Basics of HTTP",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP",
+    "summary": "HTTP is an extensible protocol that relies on concepts like resources and Uniform Resource Identifiers (URIs), simple message structure, and client-server communication flow. On top of these basic concepts, numerous extensions have been developed over the years that add updated functionality and semantics with new HTTP methods or headers."
+  },
+  {
+    "title": "ETag",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag",
+    "summary": "The ETag (or entity tag) HTTP response header is an identifier for a\n  specific version of a resource. It lets caches be more efficient and save bandwidth, as\n  a web server does not need to resend a full response if the content was not changed.\n  Additionally, etags help to prevent simultaneous updates of a resource from overwriting\n  each other (\"mid-air collisions\")."
+  },
+  {
+    "title": "201 Created",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201",
+    "summary": "The HTTP 201 Created success status response code indicates that the request has\n  succeeded and has led to the creation of a resource. The new resource, or a description\n  and link to the new resource, is effectively created before the response is sent back\n  and the newly created items are returned in the body of the message, located at either\n  the URL of the request, or at the URL in the value of the Location header."
+  },
+  {
+    "title": "Accept-Language",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language",
+    "summary": "The Accept-Language request HTTP header indicates the natural language and locale that the client prefers.\n  The server uses content negotiation to select one of the proposals and informs the client of the choice with the Content-Language response header. Browsers set required values for this header according to their active user interface language. Users rarely change it, and such changes are not recommended because they may lead to fingerprinting."
+  },
+  {
+    "title": "Origin",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin",
+    "summary": "The Origin request header indicates the origin (scheme, hostname, and port) that caused the request.\n  For example, if a user agent needs to request resources included in a page, or fetched by scripts that it executes, then the origin of the page may be included in the request."
+  },
+  {
+    "title": "Content-Encoding",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding",
+    "summary": "The Content-Encoding representation header lists any encodings that have been applied to the representation (message payload), and in what order.\n  This lets the recipient know how to decode the representation in order to obtain the original payload format.\n  Content encoding is mainly used to compress the message data without losing information about the origin media type."
+  },
+  {
+    "title": "Proxy Auto-Configuration (PAC) file",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file",
+    "summary": "A Proxy Auto-Configuration (PAC) file is a JavaScript function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:"
+  },
+  {
+    "title": "Access-Control-Allow-Credentials",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials",
+    "summary": "The Access-Control-Allow-Credentials response header\n  tells browsers whether to expose the response to the frontend JavaScript code when the\n  request's credentials mode (Request.credentials) is include."
+  },
+  {
+    "title": "202 Accepted",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202",
+    "summary": "The HyperText Transfer Protocol (HTTP) 202 Accepted\n  response status code indicates that the request has been accepted for processing, but\n  the processing has not been completed; in fact, processing may not have started yet. The\n  request might or might not eventually be acted upon, as it might be disallowed when\n  processing actually takes place."
+  },
+  {
+    "title": "307 Temporary Redirect",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/307",
+    "summary": "The method and the body of the original request are reused to perform the redirected\n  request. In the cases where you want the method used to be changed to\n  GET, use 303 See Other instead. This is\n  useful when you want to give an answer to a PUT method that is not the\n  uploaded resources, but a confirmation message (like \"You successfully uploaded XYZ\")."
+  },
+  {
+    "title": "Accept-Encoding",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding",
+    "summary": "The Accept-Encoding request HTTP header indicates the content encoding (usually a compression algorithm) that the client can understand. The server uses content negotiation to select one of the proposals and informs the client of that choice with the Content-Encoding response header."
+  },
+  {
+    "title": "WWW-Authenticate",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/WWW-Authenticate",
+    "summary": "The HTTP WWW-Authenticate response header defines the HTTP authentication methods (\"challenges\") that might be used to gain access to a specific resource."
+  },
+  {
+    "title": "Content-Length",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length",
+    "summary": "The Content-Length header indicates the size of the message body, in bytes, sent to the recipient."
+  },
+  {
+    "title": "408 Request Timeout",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/408",
+    "summary": "The HyperText Transfer Protocol (HTTP)\n  408 Request Timeout response status code means that the\n  server would like to shut down this unused connection. It is sent on an idle connection\n  by some servers, even without any previous request by the client."
+  },
+  {
+    "title": "HEAD",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD",
+    "summary": "The HTTP HEAD method requests the headers that would be returned if the HEAD request's URL was instead requested with the HTTP GET method. For example, if a URL might produce a large download, a HEAD request could read its Content-Length header to check the filesize without actually downloading the file."
+  },
+  {
+    "title": "Last-Modified",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Last-Modified",
+    "summary": "The Last-Modified response HTTP header contains a date\n  and time when the origin server believes the resource was last modified. It is used\n  as a validator to determine if the resource is the same as the previously stored one. Less accurate\n  than an ETag header, it is a fallback mechanism. Conditional requests\n  containing If-Modified-Since or If-Unmodified-Since\n  headers make use of this field."
+  },
+  {
+    "title": "Host",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Host",
+    "summary": "The Host request header specifies the host and port\n  number of the server to which the request is being sent."
+  },
+  {
+    "title": "412 Precondition Failed",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/412",
+    "summary": "The HyperText Transfer Protocol (HTTP)\n  412 Precondition Failed client error response code\n  indicates that access to the target resource has been denied. This happens with\n  conditional requests on methods other than GET or\n  HEAD when the condition defined by the\n  If-Unmodified-Since or If-None-Match headers is not\n  fulfilled. In that case, the request, usually an upload or a modification of a resource,\n  cannot be made and this error response is sent back."
+  },
+  {
+    "title": "Cookie",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cookie",
+    "summary": "The Cookie HTTP request header contains stored HTTP cookies associated with the server (i.e. previously sent by the server with the Set-Cookie header or set in JavaScript using Document.cookie)."
+  },
+  {
+    "title": "407 Proxy Authentication Required",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/407",
+    "summary": "The HTTP 407 Proxy Authentication Required client error\n  status response code indicates that the request has not been applied because it lacks\n  valid authentication credentials for a proxy server that is between the\n  browser and the server that can access the requested resource."
+  },
+  {
+    "title": "Transfer-Encoding",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Transfer-Encoding",
+    "summary": "The Transfer-Encoding header specifies the form of encoding used to safely transfer the payload body to the user."
+  },
+  {
+    "title": "Reason: Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '*'",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials",
+    "summary": "The CORS request was attempted with the credentials flag set, but the server is configured using the wildcard (\"*\") as the value of Access-Control-Allow-Origin, which doesn't allow the use of credentials."
+  },
+  {
+    "title": "Location",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Location",
+    "summary": "The Location response header indicates the URL to\n  redirect a page to. It only provides a meaning when served with a\n  3xx (redirection) or 201 (created) status response."
+  },
+  {
+    "title": "HTTP range requests",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests",
+    "summary": "An HTTP range request asks the server to send only a portion of an HTTP message back to a client. Range requests are useful for clients like media players that support random access, data tools that know they need only part of a large file, and download managers that let the user pause and resume the download."
+  },
+  {
+    "title": "410 Gone",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410",
+    "summary": "The HyperText Transfer Protocol (HTTP) 410 Gone client error response code indicates that access to the target resource is no longer available at the origin server and that this condition is likely to be permanent."
+  },
+  {
+    "title": "Access-Control-Expose-Headers",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers",
+    "summary": "The Access-Control-Expose-Headers response header allows a server to indicate which response headers should be made available to scripts running in the browser, in response to a cross-origin request."
+  },
+  {
+    "title": "206 Partial Content",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/206",
+    "summary": "The HTTP 206 Partial Content success status response code\n  indicates that the request has succeeded and the body contains the requested ranges\n  of data, as described in the Range header of the request."
+  },
+  {
+    "title": "Connection",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection",
+    "summary": "The Connection general header controls whether the\n  network connection stays open after the current transaction finishes. If the value sent\n  is keep-alive, the connection is persistent and not closed, allowing for\n  subsequent requests to the same server to be done."
+  },
+  {
+    "title": "413 Payload Too Large",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/413",
+    "summary": "The HTTP 413 Payload Too Large response status code indicates that the request entity is larger than limits defined by server; the server might close the connection or return a Retry-After header field."
+  },
+  {
+    "title": "Proxy servers and tunneling",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling",
+    "summary": "When navigating through different networks of the Internet, proxy servers and HTTP tunnels are facilitating access to content on the World Wide Web. A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet. This page outlines some basics about proxies and introduces a few configuration options."
+  },
+  {
+    "title": "Reason: CORS request not HTTP",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp",
+    "summary": "CORS requests may only use the HTTP or HTTPS URL scheme, but the URL specified by the request is of a different type.\n  This often occurs if the URL specifies a local file, using the file:/// scheme."
+  },
+  {
+    "title": "303 See Other",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/303",
+    "summary": "The HyperText Transfer Protocol (HTTP) 303 See Other\n  redirect status response code indicates that the redirects don't link to the requested resource itself, but to another page (such as a confirmation page, a representation of a real-world object — see HTTP range-14 — or an upload-progress page). This response code is often sent back as a result of\n  PUT or POST. The method used to display this\n  redirected page is always GET."
+  },
+  {
+    "title": "Identifying resources on the Web",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web",
+    "summary": "The target of an HTTP request is called a \"resource\", whose nature isn't defined further; it can be a document, a photo, or anything else. Each resource is identified by a Uniform Resource Identifier (URI) used throughout HTTP for identifying resources."
+  },
+  {
+    "title": "Retry-After",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After",
+    "summary": "The Retry-After response HTTP header indicates how long\n  the user agent should wait before making a follow-up request. There are three main cases\n  this header is used:"
+  },
+  {
+    "title": "CSP: default-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src",
+    "summary": "The HTTP Content-Security-Policy (CSP) default-src directive serves as a fallback for the other CSP fetch directives. For each of the following directives that are absent, the user agent looks for the default-src directive and uses this value for it:"
+  },
+  {
+    "title": "Feature-Policy",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy",
+    "summary": "The HTTP Feature-Policy header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any <iframe> elements in the document."
+  },
+  {
+    "title": "CSP: frame-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-src",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  frame-src directive specifies valid sources for nested\n  browsing contexts loading using elements such as <frame> and\n  <iframe>."
+  },
+  {
+    "title": "CSP: style-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src",
+    "summary": "The HTTP Content-Security-Policy (CSP) style-src directive specifies valid sources for stylesheets."
+  },
+  {
+    "title": "308 Permanent Redirect",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/308",
+    "summary": "The request method and the body will not be altered, whereas 301 may\n  incorrectly sometimes be changed to a GET method."
+  },
+  {
+    "title": "Content negotiation",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation",
+    "summary": "In HTTP, content negotiation is the mechanism that is used for serving different representations of a resource to the same URI to help the user agent specify which representation is best suited for the user (for example, which document language, which image format, or which content encoding)."
+  },
+  {
+    "title": "CONNECT",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/CONNECT",
+    "summary": "The HTTP CONNECT method starts two-way communications\n  with the requested resource. It can be used to open a tunnel."
+  },
+  {
+    "title": "431 Request Header Fields Too Large",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/431",
+    "summary": "The HTTP 431 Request Header Fields Too Large response status code\n  indicates that the server refuses to process the request because the request's\n  HTTP headers are too long.\n  The request may be resubmitted after reducing the size of the request headers."
+  },
+  {
+    "title": "CSP source values",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources",
+    "summary": "HTTP Content-Security-Policy (CSP) header directives that specify a <source> from which resources may be loaded can use any one of the values listed below.\n  Relevant directives include the fetch directives, along with others listed below."
+  },
+  {
+    "title": "Access-Control-Allow-Methods",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods",
+    "summary": "The Access-Control-Allow-Methods response header\n  specifies one or more methods allowed when accessing a resource in response to a\n  preflight request."
+  },
+  {
+    "title": "501 Not Implemented",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/501",
+    "summary": "The HyperText Transfer Protocol (HTTP) 501 Not Implemented server error response code means that the server does not support the functionality required to fulfill the request."
+  },
+  {
+    "title": "CSP: connect-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  connect-src directive restricts the URLs which can be\n  loaded using script interfaces. The APIs that are restricted are:"
+  },
+  {
+    "title": "Choosing between www and non-www URLs",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs",
+    "summary": "A recurring question among website owners is whether to choose non-www or www URLs. This page provides some advice on what's best."
+  },
+  {
+    "title": "101 Switching Protocols",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/101",
+    "summary": "The HTTP 101 Switching Protocols response code indicates\n  a protocol to which the server switches.\n  The protocol is specified in the Upgrade request header received from a client."
+  },
+  {
+    "title": "402 Payment Required",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402",
+    "summary": "The HTTP 402 Payment Required is a nonstandard response status code that is reserved for future use. This status code was created to enable digital cash or (micro) payment systems and would indicate that the requested content is not available until the client makes a payment."
+  },
+  {
+    "title": "Sec-Fetch-Mode",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode",
+    "summary": "The Sec-Fetch-Mode fetch metadata request header indicates the mode of the request."
+  },
+  {
+    "title": "100 Continue",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/100",
+    "summary": "The HTTP 100 Continue informational status response code\n  indicates that everything so far is OK and that the client should continue with the\n  request or ignore it if it is already finished."
+  },
+  {
+    "title": "A typical HTTP session",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Session",
+    "summary": "In client-server protocols, like HTTP, sessions consist of three phases:"
+  },
+  {
+    "title": "X-Forwarded-Host",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host",
+    "summary": "The X-Forwarded-Host (XFH) header is a de-facto standard\n  header for identifying the original host requested by the client in the\n  Host HTTP request header."
+  },
+  {
+    "title": "Expires",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires",
+    "summary": "The Expires HTTP header contains the date/time after which the\n  response is considered expired."
+  },
+  {
+    "title": "Upgrade-Insecure-Requests",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade-Insecure-Requests",
+    "summary": "The HTTP Upgrade-Insecure-Requests request header sends a signal to the server expressing the client's preference for an encrypted and authenticated response, and that it can successfully handle the upgrade-insecure-requests CSP directive."
+  },
+  {
+    "title": "Firefox user agent string reference",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox",
+    "summary": "This document describes the user agent string used in Firefox 4 and later and applications based on Gecko 2.0 and later. For a breakdown of changes to the string in Gecko 2.0, see Final User Agent string for Firefox 4 (blog post). See also this document on user agent sniffing and this Hacks blog post."
+  },
+  {
+    "title": "Sec-Fetch-Site",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site",
+    "summary": "The Sec-Fetch-Site fetch metadata request header indicates the relationship between a request initiator's origin and the origin of the requested resource."
+  },
+  {
+    "title": "Vary",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary",
+    "summary": "The Vary HTTP response header describes the parts of the request message aside from the method and URL that influenced the content of the response it occurs in. Most often, this is used to create a cache key when content negotiation is in use."
+  },
+  {
+    "title": "If-Modified-Since",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Modified-Since",
+    "summary": "The If-Modified-Since request HTTP header makes the\n  request conditional: the server sends back the requested resource, with a\n  200 status, only if it has been last modified after the given date. If\n  the resource has not been modified since, the response is a 304\n  without any body; the Last-Modified response header of a previous\n  request contains the date of last modification. Unlike\n  If-Unmodified-Since, If-Modified-Since can only be used\n  with a GET or HEAD."
+  },
+  {
+    "title": "Content-Security-Policy-Report-Only",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only",
+    "summary": "The HTTP Content-Security-Policy-Report-Only response header allows web developers to experiment with policies by monitoring (but not enforcing) their effects. These violation reports consist of JSON documents sent via an HTTP POST request to the specified URI."
+  },
+  {
+    "title": "300 Multiple Choices",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/300",
+    "summary": "The HTTP 300 Multiple Choices redirect status response\n  code indicates that the request has more than one possible responses. The user-agent\n  or the user should choose one of them. As there is no standardized way of choosing one\n  of the responses, this response code is very rarely used."
+  },
+  {
+    "title": "Access-Control-Max-Age",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age",
+    "summary": "The Access-Control-Max-Age response header indicates how long the results of a preflight request (that is the information contained in the Access-Control-Allow-Methods and Access-Control-Allow-Headers headers) can be cached."
+  },
+  {
+    "title": "Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin",
+    "summary": "The origin making the request does not match the origin permitted by the Access-Control-Allow-Origin header. This error can also occur if the response includes more than one Access-Control-Allow-Origin header."
+  },
+  {
+    "title": "X-Forwarded-Proto",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto",
+    "summary": "The X-Forwarded-Proto (XFP) header is a de-facto standard\n  header for identifying the protocol (HTTP or HTTPS) that a client used to connect to\n  your proxy or load balancer. Your server access logs contain the protocol used between\n  the server and the load balancer, but not the protocol used between the client and the\n  load balancer. To determine the protocol used between the client and the load balancer,\n  the X-Forwarded-Proto request header can be used."
+  },
+  {
+    "title": "414 URI Too Long",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/414",
+    "summary": "The HTTP 414 URI Too Long response status code indicates\n  that the URI requested by the client is longer than the server is willing to interpret."
+  },
+  {
+    "title": "Protocol upgrade mechanism",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism",
+    "summary": "The HTTP/1.1 protocol provides a special mechanism that can be used to upgrade an already established connection to a different protocol, using the Upgrade header field."
+  },
+  {
+    "title": "If-None-Match",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match",
+    "summary": "The If-None-Match HTTP request header makes the request conditional. For GET and HEAD methods, the server will return the requested resource, with a 200 status, only if it doesn't have an ETag matching the given ones. For other methods, the request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed."
+  },
+  {
+    "title": "CSP: upgrade-insecure-requests",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  upgrade-insecure-requests directive instructs user\n  agents to treat all of a site's insecure URLs (those served over HTTP) as though they\n  have been replaced with secure URLs (those served over HTTPS). This directive is\n  intended for web sites with large numbers of insecure legacy URLs that need to be\n  rewritten."
+  },
+  {
+    "title": "CSP: img-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src",
+    "summary": "The HTTP Content-Security-Policy img-src directive specifies valid sources of images and favicons."
+  },
+  {
+    "title": "Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed",
+    "summary": "More than one Access-Control-Allow-Origin header was sent by the\n  server. This isn't allowed."
+  },
+  {
+    "title": "417 Expectation Failed",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/417",
+    "summary": "The HTTP 417 Expectation Failed client error response\n  code indicates that the expectation given in the request's Expect\n  header could not be met."
+  },
+  {
+    "title": "Date",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Date",
+    "summary": "The Date general HTTP header contains the date and time\n  at which the message originated."
+  },
+  {
+    "title": "Access-Control-Request-Headers",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Headers",
+    "summary": "The Access-Control-Request-Headers request header is used by browsers when issuing a preflight request to let the server know which HTTP headers the client might send when the actual request is made (such as with setRequestHeader()). The complementary server-side header of Access-Control-Allow-Headers will answer this browser-side header."
+  },
+  {
+    "title": "Expect-CT",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT",
+    "summary": "The Expect-CT header lets sites opt in to reporting and/or enforcement of Certificate Transparency requirements. Certificate Transparency (CT) aims to prevent the use of misissued certificates for that site from going unnoticed."
+  },
+  {
+    "title": "Sec-Fetch-Dest",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest",
+    "summary": "The Sec-Fetch-Dest fetch metadata request header indicates the request's destination. That is the initiator of the original fetch request, which is where (and how) the fetched data will be used."
+  },
+  {
+    "title": "Cross-Origin-Opener-Policy",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy",
+    "summary": "The HTTP Cross-Origin-Opener-Policy (COOP) response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents."
+  },
+  {
+    "title": "Server",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server",
+    "summary": "The Server header describes the\n  software used by the origin server that handled the request — that is, the server that\n  generated the response."
+  },
+  {
+    "title": "TRACE",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/TRACE",
+    "summary": "The HTTP TRACE method performs a message loop-back test along the path to the target resource, providing a useful debugging mechanism."
+  },
+  {
+    "title": "HTTP conditional requests",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Conditional_requests",
+    "summary": "HTTP has a concept of conditional requests, where the result, and even the success of a request, can be changed by comparing the affected resources with the value of a validator. Such requests can be useful to validate the content of a cache, and sparing a useless control, to verify the integrity of a document, like when resuming a download, or when preventing lost updates when uploading or modifying a document on the server."
+  },
+  {
+    "title": "Pragma",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma",
+    "summary": "The Pragma HTTP/1.0 general header is an\n  implementation-specific header that may have various effects along the request-response\n  chain. This header serves for backwards compatibility with the HTTP/1.0 caches that do not have a\n  Cache-Control HTTP/1.1 header."
+  },
+  {
+    "title": "103 Early Hints",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/103",
+    "summary": "The HTTP 103 Early Hints information response status code\n  is primarily intended to be used with the Link header to allow the\n  user agent to start preloading resources while the server is still preparing a response."
+  },
+  {
+    "title": "Compression in HTTP",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Compression",
+    "summary": "Compression is an important way to increase the performance of a Web site. For some documents, size reduction of up to 70% lowers the bandwidth capacity needs. Over the years, algorithms also got more efficient, and new ones are supported by clients and servers."
+  },
+  {
+    "title": "Range",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range",
+    "summary": "The Range HTTP request header indicates the part of a document that the server should return. Several parts can be requested with one Range header at once, and the server may send back these ranges in a multipart document. If the server sends back ranges, it uses the 206 Partial Content for the response. If the ranges are invalid, the server returns the 416 Range Not Satisfiable error. The server can also ignore the Range header and return the whole document with a 200 status code."
+  },
+  {
+    "title": "Cross-Origin-Embedder-Policy",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy",
+    "summary": "The HTTP Cross-Origin-Embedder-Policy (COEP) response header prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using CORP or CORS)."
+  },
+  {
+    "title": "Content-Language",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Language",
+    "summary": "The Content-Language representation header is used to describe the language(s) intended for the audience, so users can differentiate it according to their own preferred language."
+  },
+  {
+    "title": "Clear-Site-Data",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Clear-Site-Data",
+    "summary": "The Clear-Site-Data header clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored by a client browser for their origins."
+  },
+  {
+    "title": "426 Upgrade Required",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/426",
+    "summary": "The HTTP 426 Upgrade Required client error response code\n  indicates that the server refuses to perform the request using the current protocol but\n  might be willing to do so after the client upgrades to a different protocol."
+  },
+  {
+    "title": "CSP: script-src-elem",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem",
+    "summary": "The HTTP Content-Security-Policy (CSP) script-src-elem directive specifies valid sources for JavaScript <script> elements, but not inline script event handlers like onclick."
+  },
+  {
+    "title": "Link prefetching FAQ",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ",
+    "summary": "Link prefetching is a browser mechanism, which utilizes browser idle time to download or prefetch documents that the user might visit in the near future. A web page provides a set of prefetching hints to the browser, and after the browser is finished loading the page, it begins silently prefetching specified documents and stores them in its cache. When the user visits one of the prefetched documents, it can be served up quickly out of the browser's cache."
+  },
+  {
+    "title": "Forwarded",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Forwarded",
+    "summary": "The Forwarded request header contains information that may be added by reverse proxy servers (load balancers, CDNs, and so on) that would otherwise be altered or lost when proxy servers are involved in the path of the request."
+  },
+  {
+    "title": "Link",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link",
+    "summary": "The HTTP Link entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element."
+  },
+  {
+    "title": "CSP: base-uri",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/base-uri",
+    "summary": "The HTTP Content-Security-Policy base-uri directive restricts the URLs which can be used in a document's <base> element. If this value is absent, then any URI is allowed. If this directive is absent, the user agent will use the value in the <base> element."
+  },
+  {
+    "title": "CSP: report-uri",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri",
+    "summary": "The deprecated HTTP Content-Security-Policy (CSP)\n  report-uri directive instructs the user agent to report\n  attempts to violate the Content Security Policy. These violation reports consist of JSON\n  documents sent via an HTTP POST request to the specified URI."
+  },
+  {
+    "title": "Connection management in HTTP/1.x",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x",
+    "summary": "Connection management is a key topic in HTTP: opening and maintaining connections largely impacts the performance of Web sites and Web applications. In HTTP/1.x, there are several models: short-lived connections, persistent connections, and HTTP pipelining."
+  },
+  {
+    "title": "Proxy-Authorization",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization",
+    "summary": "The HTTP Proxy-Authorization request header contains the\n  credentials to authenticate a user agent to a proxy server, usually after the server has\n  responded with a 407 Proxy Authentication Required status\n  and the Proxy-Authenticate header."
+  },
+  {
+    "title": "Reason: CORS request external redirect not allowed",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed",
+    "summary": "The CORS request was responded to by the server with an HTTP redirect\n  to a URL on a different origin than the original request, which is not permitted during\n  CORS requests."
+  },
+  {
+    "title": "Feature Policy",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Feature_Policy",
+    "summary": "Feature Policy allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to Content Security Policy but controls features instead of security behavior."
+  },
+  {
+    "title": "Sec-CH-UA",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA",
+    "summary": "The Sec-CH-UA user agent client hint request header provides the user-agent's branding and significant version information."
+  },
+  {
+    "title": "Reason: missing token 'xyz' in CORS header 'Access-Control-Allow-Headers' from CORS preflight channel",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight",
+    "summary": "The Access-Control-Allow-Headers header is sent by the server to let the client know which headers it supports for CORS requests. The value of Access-Control-Allow-Headers should be a comma-delineated list of header names, such as \"X-Custom-Information\" or any of the standard but non-basic header names (which are always allowed)."
+  },
+  {
+    "title": "If-Match",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match",
+    "summary": "The If-Match HTTP request header makes a request conditional."
+  },
+  {
+    "title": "411 Length Required",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/411",
+    "summary": "The HyperText Transfer Protocol (HTTP)\n  411 Length Required client error response code indicates\n  that the server refuses to accept the request without a defined\n  Content-Length header."
+  },
+  {
+    "title": "505 HTTP Version Not Supported",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/505",
+    "summary": "The HyperText Transfer Protocol (HTTP)\n  505 HTTP Version Not Supported response status code\n  indicates that the HTTP version used in the request is not supported by the server."
+  },
+  {
+    "title": "DNT",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT",
+    "summary": "The DNT (Do Not\n  Track) request header indicates the user's tracking preference. It lets\n  users indicate whether they would prefer privacy rather than personalized content."
+  },
+  {
+    "title": "203 Non-Authoritative Information",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/203",
+    "summary": "The HTTP 203 Non-Authoritative Information response\n  status indicates that the request was successful but the enclosed payload has been\n  modified by a transforming proxy from that of the origin\n  server's 200 (OK) response ."
+  },
+  {
+    "title": "Upgrade",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade",
+    "summary": "The HTTP 1.1 (only) Upgrade header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket."
+  },
+  {
+    "title": "CSP: object-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/object-src",
+    "summary": "The HTTP Content-Security-Policy\n  object-src directive specifies valid sources for the\n  <object>, <embed>, and <applet>\n  elements."
+  },
+  {
+    "title": "Reason: CORS preflight channel did not succeed",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed",
+    "summary": "The CORS request requires preflight, preflighting could not be\n  performed. There are a couple of reasons why preflighting might fail:"
+  },
+  {
+    "title": "Cross-Origin Resource Policy",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)",
+    "summary": "Cross-Origin Resource Policy is a policy set by the Cross-Origin-Resource-Policy HTTP header that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like <script> and <img>), to mitigate speculative side-channel attacks, like Spectre, as well as Cross-Site Script Inclusion attacks."
+  },
+  {
+    "title": "Allow",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Allow",
+    "summary": "The Allow header lists the set of methods supported by a resource."
+  },
+  {
+    "title": "Access-Control-Request-Method",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Method",
+    "summary": "The Access-Control-Request-Method request header is used\n  by browsers when issuing a preflight request, to let the server know\n  which HTTP method will be used when the\n  actual request is made. This header is necessary as the preflight request is always an\n  OPTIONS and doesn't use the same method as the actual request."
+  },
+  {
+    "title": "Using Feature Policy",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy",
+    "summary": "Feature Policy allows you to control which origins can use which features, both in the top-level page and in embedded frames. Essentially, you write a policy, which is an allowed list of origins for each feature. For every feature controlled by Feature Policy, the feature is only enabled in the current document or frame if its origin matches the allowed list of origins."
+  },
+  {
+    "title": "Content-Range",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Range",
+    "summary": "The Content-Range response HTTP header indicates where in\n  a full body message a partial message belongs."
+  },
+  {
+    "title": "CSP: form-action",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action",
+    "summary": "The HTTP Content-Security-Policy (CSP) form-action directive restricts the URLs which can be used as the target of form submissions from a given context."
+  },
+  {
+    "title": "416 Range Not Satisfiable",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/416",
+    "summary": "The HyperText Transfer Protocol (HTTP) 416 Range Not Satisfiable error response code indicates that a server cannot serve the requested ranges. The most likely reason is that the document doesn't contain such ranges, or that the Range header value, though syntactically correct, doesn't make sense."
+  },
+  {
+    "title": "451 Unavailable For Legal Reasons",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/451",
+    "summary": "The HyperText Transfer Protocol (HTTP) 451 Unavailable For Legal Reasons client error response code indicates that the user requested a resource that is not available due to legal reasons, such as a web page for which a legal action has been issued."
+  },
+  {
+    "title": "Reason: CORS disabled",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSDisabled",
+    "summary": "A request that needs to use CORS was attempted, but CORS is disabled in\n  the user's browser. When this happens, the user needs to turn CORS back on in their\n  browser."
+  },
+  {
+    "title": "Age",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Age",
+    "summary": "The Age header contains the time in seconds the object was in a proxy cache."
+  },
+  {
+    "title": "CSP: font-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/font-src",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  font-src directive specifies\n  valid sources for fonts loaded using @font-face."
+  },
+  {
+    "title": "HTTP resources and specifications",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Resources_and_specifications",
+    "summary": "HTTP was first specified in the early 1990s. Designed with extensibility in mind, it has seen numerous additions over the years; this lead to its specification being scattered through numerous specification documents (in the midst of experimental abandoned extensions). This page lists relevant resources about HTTP."
+  },
+  {
+    "title": "Content Security Policy: The page's settings blocked the loading of a resource: xyz",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP/Errors/CSPViolation",
+    "summary": "The warning \"Content Security Policy: The page's settings blocked the loading of a resource: xyz\" occurs when the page's CSP configuration given by xyz prevents the resource from being loaded into the document's context."
+  },
+  {
+    "title": "Alt-Svc",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Alt-Svc",
+    "summary": "The Alt-Svc HTTP header allows a server to indicate that another network location (the \"alternative service\") can be treated as authoritative for that origin when making future requests."
+  },
+  {
+    "title": "TE",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/TE",
+    "summary": "The TE request header specifies the transfer encodings\n  the user agent is willing to accept. (you could informally call it\n  Accept-Transfer-Encoding, which would be more intuitive)."
+  },
+  {
+    "title": "Proxy-Authenticate",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authenticate",
+    "summary": "The HTTP Proxy-Authenticate response header defines the\n  authentication method that should be used to gain access to a resource behind a\n  proxy server. It authenticates the request to the proxy server, allowing\n  it to transmit the request further."
+  },
+  {
+    "title": "CSP: report-to",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to",
+    "summary": "The Content-Security-Policy\n  Report-To HTTP response header field\n  instructs the user agent to store reporting endpoints for an origin."
+  },
+  {
+    "title": "Cross-Origin-Resource-Policy",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy",
+    "summary": "The HTTP Cross-Origin-Resource-Policy response header\n  conveys a desire that the browser blocks no-cors cross-origin/cross-site requests to the\n  given resource."
+  },
+  {
+    "title": "425 Too Early",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/425",
+    "summary": "The HyperText Transfer Protocol (HTTP) 425 Too Early\n  response status code indicates that the server is unwilling to risk processing a request\n  that might be replayed, which creates the potential for a replay attack."
+  },
+  {
+    "title": "Accept-Charset",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Charset",
+    "summary": "The Accept-Charset request HTTP header was a header that advertised a client's supported character encodings. It is no longer widely used."
+  },
+  {
+    "title": "Accept-Ranges",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges",
+    "summary": "The Accept-Ranges HTTP response header is a marker used\n  by the server to advertise its support for partial requests from the client for file downloads. The value of this field\n  indicates the unit that can be used to define a range."
+  },
+  {
+    "title": "HTTP Client hints",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints",
+    "summary": "Client hints are a set of HTTP request header fields that a server can proactively request from a client to get information about the device, network, user, and user-agent-specific preferences.\n  The server can determine which resources to send, based on the information that the client chooses to provide."
+  },
+  {
+    "title": "Server-Timing",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing",
+    "summary": "The Server-Timing header communicates one or more metrics and descriptions for a given request-response cycle. It is used to surface any backend server timing metrics (e.g. database read/write, CPU time, file system access, etc.) in the developer tools in the user's browser or in the PerformanceServerTiming interface."
+  },
+  {
+    "title": "Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials",
+    "summary": "The CORS request requires that the server permit the use of\n  credentials, but the server's Access-Control-Allow-Credentials\n  header's value isn't set to true to enable their use."
+  },
+  {
+    "title": "Content-Location",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Location",
+    "summary": "The Content-Location header indicates an alternate\n  location for the returned data. The principal use is to indicate the URL of a resource\n  transmitted as the result of content negotiation."
+  },
+  {
+    "title": "Expect",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect",
+    "summary": "The Expect HTTP request header indicates expectations\n  that need to be met by the server to handle the request successfully."
+  },
+  {
+    "title": "X-DNS-Prefetch-Control",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control",
+    "summary": "The X-DNS-Prefetch-Control HTTP response header controls\n  DNS prefetching, a feature by which browsers proactively perform domain name resolution\n  on both links that the user may choose to follow as well as URLs for items referenced by\n  the document, including images, CSS, JavaScript, and so forth."
+  },
+  {
+    "title": "CSP: require-trusted-types-for",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for",
+    "summary": "The HTTP Content-Security-Policy (CSP) require-trusted-types-for \n    Experimental\n directive instructs user agents to control the data passed to DOM XSS sink functions, like Element.innerHTML setter."
+  },
+  {
+    "title": "Via",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via",
+    "summary": "The Via general header is added by proxies, both forward\n  and reverse, and can appear in the request or response headers. It\n  is used for tracking message forwards, avoiding request loops, and identifying the\n  protocol capabilities of senders along the request/response chain."
+  },
+  {
+    "title": "428 Precondition Required",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/428",
+    "summary": "The HTTP 428 Precondition Required response status code\n  indicates that the server requires the request to be conditional."
+  },
+  {
+    "title": "Trailer",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Trailer",
+    "summary": "The Trailer response header allows the sender to include additional\n  fields at the end of chunked messages in order to supply metadata that might be\n  dynamically generated while the message body is sent, such as a message integrity check,\n  digital signature, or post-processing status."
+  },
+  {
+    "title": "CSP: sandbox",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  sandbox directive enables a sandbox for the requested\n  resource similar to the <iframe> sandbox\n  attribute. It applies restrictions to a page's actions including preventing popups,\n  preventing the execution of plugins and scripts, and enforcing a same-origin policy."
+  },
+  {
+    "title": "Save-Data",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Save-Data",
+    "summary": "The Save-Data network client hint request header field is a boolean which indicates the client's preference for reduced data usage.\n  This could be for reasons such as high transfer costs, slow connection speeds, etc."
+  },
+  {
+    "title": "205 Reset Content",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/205",
+    "summary": "The HTTP 205 Reset Content response status tells the\n  client to reset the document view, so for example to clear the content of a form, reset\n  a canvas state, or to refresh the UI."
+  },
+  {
+    "title": "CSP: media-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/media-src",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  media-src directive specifies valid sources for loading\n  media using the <audio> and <video> elements."
+  },
+  {
+    "title": "If-Range",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Range",
+    "summary": "The If-Range HTTP request header makes a range request\n  conditional: if the condition is fulfilled, the range request is issued, and the\n  server sends back a 206 Partial Content answer with the\n  appropriate body. If the condition is not fulfilled, the full resource is sent back\n  with a 200 OK status."
+  },
+  {
+    "title": "CSP: worker-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  worker-src directive specifies valid sources for\n  Worker, SharedWorker, or ServiceWorker\n  scripts."
+  },
+  {
+    "title": "Sec-Fetch-User",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User",
+    "summary": "The Sec-Fetch-User fetch metadata request header is only sent for requests initiated by user activation, and its value will always be ?1."
+  },
+  {
+    "title": "Digest",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Digest",
+    "summary": "The Digest response HTTP header provides a digest of the selected representation of the requested resource."
+  },
+  {
+    "title": "Sec-CH-UA-Platform",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform",
+    "summary": "The Sec-CH-UA-Platform user agent client hint request header provides the platform or operating system on which the user agent is running.\n  For example: \"Windows\" or \"Android\"."
+  },
+  {
+    "title": "CSP: child-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/child-src",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  child-src directive defines the valid sources for web workers and nested browsing\n  contexts loaded using elements such as <frame> and\n  <iframe>. For workers, non-compliant requests are treated as fatal\n  network errors by the user agent."
+  },
+  {
+    "title": "List of default Accept values",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values",
+    "summary": "This article documents the default values for the HTTP Accept header for specific inputs and browser versions."
+  },
+  {
+    "title": "506 Variant Also Negotiates",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/506",
+    "summary": "The HyperText Transfer Protocol (HTTP) 506 Variant Also Negotiates response status code may be given in the context of Transparent Content Negotiation (see RFC 2295). This protocol enables a client to retrieve the best variant of a given resource, where the server supports multiple variants."
+  },
+  {
+    "title": "511 Network Authentication Required",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/511",
+    "summary": "The HTTP 511 Network Authentication Required response\n  status code indicates that the client needs to authenticate to gain network access."
+  },
+  {
+    "title": "CSP: block-all-mixed-content",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content",
+    "summary": "The HTTP Content-Security-Policy (CSP) block-all-mixed-content directive prevents loading any assets over HTTP when the page uses HTTPS."
+  },
+  {
+    "title": "Accept-CH",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH",
+    "summary": "The Accept-CH header may be set by a server to specify\n  which client hints headers a client\n  should include in subsequent requests."
+  },
+  {
+    "title": "CSP: style-src-elem",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  style-src-elem directive\n  specifies valid sources for stylesheets <style> elements and\n  <link> elements with rel=\"stylesheet\"."
+  },
+  {
+    "title": "Sec-CH-UA-Mobile",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Mobile",
+    "summary": "The Sec-CH-UA-Mobile user agent client hint request header indicates whether the browser is on a mobile device.\n  It can also be used by a desktop browser to indicate a preference for a \"mobile\" user experience."
+  },
+  {
+    "title": "SourceMap",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/SourceMap",
+    "summary": "The SourceMap HTTP response header links generated code to a source map, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger."
+  },
+  {
+    "title": "Warning",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning",
+    "summary": "The Warning HTTP header contains information about possible problems with the status of the message.\n  More than one Warning header may appear in a response."
+  },
+  {
+    "title": "Timing-Allow-Origin",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin",
+    "summary": "The Timing-Allow-Origin response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions."
+  },
+  {
+    "title": "507 Insufficient Storage",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/507",
+    "summary": "The HyperText Transfer Protocol (HTTP) 507 Insufficient Storage response status code may be given in the context of the Web Distributed Authoring and Versioning (WebDAV) protocol (see RFC 4918)."
+  },
+  {
+    "title": "CSP: trusted-types",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types",
+    "summary": "The HTTP Content-Security-Policy (CSP) trusted-types \n    Experimental\n directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings."
+  },
+  {
+    "title": "508 Loop Detected",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/508",
+    "summary": "The HyperText Transfer Protocol (HTTP) 508 Loop Detected\n  response status code may be given in the context of the Web Distributed Authoring and\n  Versioning (WebDAV) protocol."
+  },
+  {
+    "title": "From",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/From",
+    "summary": "The From request header contains an Internet email\n  address for a human user who controls the requesting user agent."
+  },
+  {
+    "title": "CSP: script-src-attr",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  script-src-attr directive specifies valid sources for\n  JavaScript inline event handlers. This includes only inline script event handlers like\n  onclick, but not URLs loaded directly into <script>\n  elements."
+  },
+  {
+    "title": "Accept-Post",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Post",
+    "summary": "The Accept-Post response HTTP header advertises which media types are accepted by the server for HTTP post requests."
+  },
+  {
+    "title": "Sec-WebSocket-Accept",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-WebSocket-Accept",
+    "summary": "The Sec-WebSocket-Accept header is used in the websocket opening\n  handshake. It would appear in the response headers. That is, this is header is sent from\n  server to client to inform that server is willing to initiate a websocket connection."
+  },
+  {
+    "title": "If-Unmodified-Since",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since",
+    "summary": "The HyperText Transfer Protocol (HTTP) If-Unmodified-Since request header makes the\n  request for the resource conditional: the server will send the requested resource or accept it in\n  the case of a POST or another non-safe method only if the resource has not been modified after the date specified by this HTTP header. If the resource has been modified\n  after the specified date, the response will be a 412 Precondition Failed error."
+  },
+  {
+    "title": "Viewport-Width",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Viewport-Width",
+    "summary": "The Viewport-Width device client hint request header provides the client's layout viewport width in CSS pixels. The value is rounded up to the smallest following integer (i.e. ceiling value)."
+  },
+  {
+    "title": "510 Not Extended",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/510",
+    "summary": "The HyperText Transfer Protocol (HTTP) 510 Not Extended\n  response status code is sent in the context of the HTTP Extension Framework, defined in\n  RFC 2774."
+  },
+  {
+    "title": "Accept-Patch",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Patch",
+    "summary": "The Accept-Patch response HTTP header advertises which media-type the server is able to understand in a PATCH request."
+  },
+  {
+    "title": "Feature-Policy: fullscreen",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/fullscreen",
+    "summary": "The HTTP Feature-Policy header fullscreen directive controls whether the current document is allowed to use Element.requestFullscreen(). When this policy is enabled, the returned Promise rejects with a TypeError."
+  },
+  {
+    "title": "Accept-CH-Lifetime",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH-Lifetime",
+    "summary": "The Accept-CH-Lifetime header is set by the server to\n  specify the persistence of the client hint headers it specified using Accept-CH, that the client should\n  include in subsequent requests."
+  },
+  {
+    "title": "Device-Memory",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Device-Memory",
+    "summary": "The Device-Memory device client hint request header field indicates the approximate amount of available RAM on the client device. The header is part of the Device Memory API."
+  },
+  {
+    "title": "Feature-Policy: geolocation",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/geolocation",
+    "summary": "The HTTP Feature-Policy header\n  geolocation directive controls whether the current document is allowed to\n  use the Geolocation Interface. When this policy is enabled, calls to\n  getCurrentPosition() and\n  watchPosition() will cause those functions'\n  callbacks to be invoked with a GeolocationPositionError code of\n  PERMISSION_DENIED."
+  },
+  {
+    "title": "Sec-CH-UA-Full-Version-List",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Full-Version-List",
+    "summary": "The Sec-CH-UA-Full-Version-List user agent client hint request header provides the user-agent's branding and full version information."
+  },
+  {
+    "title": "Sec-GPC",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-GPC",
+    "summary": "The Sec-GPC (Global Privacy Control) request header indicates whether the user consents to a website or service selling or sharing their personal information with third parties."
+  },
+  {
+    "title": "DPR",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR",
+    "summary": "The DPR device client hint request header provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every CSS pixel."
+  },
+  {
+    "title": "CSP: manifest-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/manifest-src",
+    "summary": "The HTTP\n  Content-Security-Policy: manifest-src\n  directive specifies which manifest can be applied\n  to the resource."
+  },
+  {
+    "title": "Reason: CORS header 'Origin' cannot be added",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded",
+    "summary": "The user agent was unable to add the required Origin\n  header to the HTTP request. All CORS requests must have an\n  Origin header."
+  },
+  {
+    "title": "CSP: prefetch-src",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/prefetch-src",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  prefetch-src directive specifies valid resources that may\n  be prefetched or prerendered."
+  },
+  {
+    "title": "Feature-Policy: midi",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/midi",
+    "summary": "The HTTP Feature-Policy header midi directive controls whether the current document is allowed to use the Web MIDI API. When this policy is enabled, the Promise returned by Navigator.requestMIDIAccess() will reject with a DOMException."
+  },
+  {
+    "title": "CSP: style-src-attr",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-attr",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  style-src-attr directive\n  specifies valid sources for inline styles applied to individual DOM elements."
+  },
+  {
+    "title": "Downlink",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Downlink",
+    "summary": "The Downlink Client hint request header field provides the approximate bandwidth of the client's connection to the server, in Mbps."
+  },
+  {
+    "title": "Feature-Policy: encrypted-media",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/encrypted-media",
+    "summary": "The HTTP Feature-Policy header encrypted-media directive controls whether the current document is allowed to use the Encrypted Media Extensions API (EME). When this policy is enabled, the Promise returned by Navigator.requestMediaKeySystemAccess() will reject with a DOMException."
+  },
+  {
+    "title": "Service-Worker-Navigation-Preload",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Service-Worker-Navigation-Preload",
+    "summary": "The Service-Worker-Navigation-Preload request header indicates that the request was the result of a fetch() operation made during service worker navigation preloading.\n  It allows a server to respond with a different resource than for a normal fetch()."
+  },
+  {
+    "title": "Feature-Policy: web-share",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share",
+    "summary": "The HTTP Feature-Policy header web-share directive controls whether the current document is allowed to use the Navigator.share() method of the Web Share API to share text, links, images, and other content to arbitrary destinations of the user's choice."
+  },
+  {
+    "title": "Sec-CH-UA-Platform-Version",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform-Version",
+    "summary": "The Sec-CH-UA-Platform-Version user agent client hint request header provides the version of the operating system on which the user agent is running."
+  },
+  {
+    "title": "CSP: plugin-types",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/plugin-types",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  plugin-types directive restricts the set of plugins that\n  can be embedded into a document by limiting the types of resources which can be loaded."
+  },
+  {
+    "title": "CSP: referrer",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/referrer",
+    "summary": "The HTTP Content-Security-Policy (CSP)\n  referrer directive used to specify information in the\n  Referer header (with a single r as this was a typo in the\n  original spec) for links away from a page. This API is deprecated and removed from\n  browsers."
+  },
+  {
+    "title": "Feature-Policy: camera",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/camera",
+    "summary": "The HTTP Feature-Policy header\n  camera directive controls whether the current document is allowed to use\n  video input devices. When this policy is enabled, the Promise returned\n  by MediaDevices.getUserMedia() will reject with\n  a NotAllowedError DOMException."
+  },
+  {
+    "title": "Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound",
+    "summary": "The HTTP method being used by the CORS request is not included in the\n  list of methods specified by the response's\n  Access-Control-Allow-Methods header. This header specifies a\n  comma-delineated list of the HTTP methods which may be used when using CORS to access\n  the URL specified in the request; if the request is using any other method, this error\n  occurs."
+  },
+  {
+    "title": "Feature-Policy: autoplay",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/autoplay",
+    "summary": "The HTTP Feature-Policy header\n  autoplay directive controls whether the current document is allowed to\n  autoplay media requested through the HTMLMediaElement interface.\n  When this policy is enabled and there were no user gestures, the Promise\n  returned by HTMLMediaElement.play() will reject with\n  a DOMException. The autoplay attribute on\n  <audio> and <video> elements will be ignored."
+  },
+  {
+    "title": "Feature-Policy: display-capture",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/display-capture",
+    "summary": "The HTTP Feature-Policy header display-capture directive controls whether or not the document is permitted to use Screen Capture API, that is, getDisplayMedia() to capture the screen's contents."
+  },
+  {
+    "title": "CSP: require-sri-for",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for",
+    "summary": "The HTTP Content-Security-Policy\n  require-sri-for directive instructs the client to require\n  the use of Subresource Integrity for scripts or styles on the page."
+  },
+  {
+    "title": "Large-Allocation",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Large-Allocation",
+    "summary": "The non-standard Large-Allocation response header tells the browser that the page being loaded is going to want to perform a large allocation.\n  It's not implemented in current versions of any browser, but is harmless to send to any browser."
+  },
+  {
+    "title": "NEL",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/NEL",
+    "summary": "The HTTP NEL response header is used to configure network request logging."
+  },
+  {
+    "title": "Content-DPR",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-DPR",
+    "summary": "The Content-DPR response header is used to confirm the image device to pixel ratio in requests where the screen DPR client hint was used to select an image resource."
+  },
+  {
+    "title": "RTT",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/RTT",
+    "summary": "The RTT Client hint request header field provides the approximate round trip time on the application layer, in milliseconds. The RTT hint, unlike transport layer RTT, includes server processing time."
+  },
+  {
+    "title": "Feature-Policy: xr-spatial-tracking",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking",
+    "summary": "The HTTP Feature-Policy header xr-spatial-tracking directive controls whether the current document is allowed to use the WebXR Device API. This policy controls whether navigator.xr.requestSession() can return XRSession that requires spatial tracking and whether user agent can indicate support for sessions supporting spatial tracking via navigator.xr.isSessionSupported() and devicechange event on navigator.xr object."
+  },
+  {
+    "title": "Width",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Width",
+    "summary": "The Width device client hint request header field indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value)."
+  },
+  {
+    "title": "Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader",
+    "summary": "The response to the CORS request that was sent by the server includes\n  an Access-Control-Allow-Headers header which includes at least one\n  invalid header name."
+  },
+  {
+    "title": "Feature-Policy: accelerometer",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/accelerometer",
+    "summary": "The HTTP Feature-Policy header accelerometer directive controls whether the current document is allowed to gather information about the acceleration of the device through the Accelerometer interface."
+  },
+  {
+    "title": "Feature-Policy: document-domain",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/document-domain",
+    "summary": "The HTTP Feature-Policy header\n  document-domain directive controls whether the current document is\n  allowed to set document.domain. When this policy is disabled, attempting\n  to set document.domain will fail and cause a SecurityError\n  DOMException to be thrown."
+  },
+  {
+    "title": "Feature-Policy: sync-xhr",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/sync-xhr",
+    "summary": "The HTTP Feature-Policy header sync-xhr directive controls whether the current document is allowed to make synchronous XMLHttpRequest requests."
+  },
+  {
+    "title": "Feature-Policy: payment",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/payment",
+    "summary": "The HTTP Feature-Policy header field's payment directive controls whether the current document is allowed to use the Payment Request API. When this policy is disabled, the PaymentRequest() constructor will throw a SyntaxError DOMException."
+  },
+  {
+    "title": "Feature-Policy: publickey-credentials-get",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials-get",
+    "summary": "The HTTP Feature-Policy header publickey-credentials-get directive controls whether the current document is allowed to access the Web Authentication API to retrieve public-key credentials; i.e., via navigator.credentials.get({publicKey: ..., ...})."
+  },
+  {
+    "title": "Sec-CH-UA-Model",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Model",
+    "summary": "The Sec-CH-UA-Model user agent client hint request header indicates the device model on which the browser is running."
+  },
+  {
+    "title": "Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod",
+    "summary": "The response to the CORS request that was sent by the server includes\n  an Access-Control-Allow-Methods header which includes at least one\n  invalid method name."
+  },
+  {
+    "title": "ECT",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ECT",
+    "summary": "The ECT Client hint request header field indicates the effective connection type: slow-2g, 2g, 3g, 4g."
+  },
+  {
+    "title": "Max-Forwards",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Max-Forwards",
+    "summary": "The Max-Forwards request HTTP header is used with the TRACE method to limit the number of nodes (usually proxies) that request goes through. Its value is an integer value indicating the maximum amount of nodes it must visit. At each node, the value is decremented and the TRACE request is forwarded to the next node, until the destination is reached, or the received value of Max-Forwards is zero. The request is then sent back, except for some headers, as the body of a 200 OK response."
+  },
+  {
+    "title": "Sec-CH-UA-Arch",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Arch",
+    "summary": "The Sec-CH-UA-Arch user agent client hint request header provides the user-agent's underlying CPU architecture, such as ARM or x86."
+  },
+  {
+    "title": "Sec-CH-UA-Full-Version",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Full-Version",
+    "summary": "The Sec-CH-UA-Full-Version user agent client hint request header provides the user-agent's full version string."
+  },
+  {
+    "title": "Tk",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Tk",
+    "summary": "The Tk response header indicates the tracking status that\n  applied to the corresponding request."
+  },
+  {
+    "title": "Early-Data",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Early-Data",
+    "summary": "The Early-Data header is set by\n  an intermediary to indicate that the request has been conveyed in TLS early data,\n  and also indicates that the intermediary understands the 425 (Too Early) status code."
+  },
+  {
+    "title": "Sec-CH-UA-Bitness",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Bitness",
+    "summary": "The Sec-CH-UA-Bitness user agent client hint request header provides the \"bitness\" of the user-agent's underlying CPU architecture.\n  This is the size in bits of an integer or memory address—typically 64 or 32 bits."
+  },
+  {
+    "title": "Feature-Policy: ambient-light-sensor",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/ambient-light-sensor",
+    "summary": "The HTTP Feature-Policy header ambient-light-sensor directive controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the AmbientLightSensor interface."
+  },
+  {
+    "title": "Feature-Policy: microphone",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/microphone",
+    "summary": "The HTTP Feature-Policy header\n  microphone directive controls whether the current document is allowed to\n  use audio input devices. When this policy is enabled, the Promise\n  returned by MediaDevices.getUserMedia() will reject with a\n  NotAllowedError."
+  },
+  {
+    "title": "Feature-Policy: picture-in-picture",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture",
+    "summary": "The HTTP Feature-Policy header picture-in-picture directive controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API."
+  },
+  {
+    "title": "Want-Digest",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Want-Digest",
+    "summary": "The Want-Digest HTTP header is primarily used in a request, to ask the server to provide a digest of the requested resource using the Digest response header."
+  },
+  {
+    "title": "Feature-Policy: battery",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/battery",
+    "summary": "The HTTP Feature-Policy header battery directive controls whether the current document is allowed to gather information about the battery of the device through the BatteryManager interface obtained via Navigator.getBattery()."
+  },
+  {
+    "title": "Feature-Policy: gyroscope",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/gyroscope",
+    "summary": "The HTTP Feature-Policy header gyroscope directive controls whether the current document is allowed to gather information about the orientation of the device through the Gyroscope interface."
+  },
+  {
+    "title": "Feature-Policy: speaker-selection",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/speaker-selection",
+    "summary": "The HTTP Feature-Policy header speaker-selection directive controls whether the current document is allowed to enumerate and select audio output devices (speakers, headphones, etc.)."
+  },
+  {
+    "title": "Feature-Policy: screen-wake-lock",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/screen-wake-lock",
+    "summary": "The HTTP Feature-Policy header screen-wake-lock directive controls whether the current document is allowed to use Screen Wake Lock API to indicate that device should not dim or turn off the screen."
+  },
+  {
+    "title": "Feature-Policy: legacy-image-formats",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/legacy-image-formats",
+    "summary": "The HTTP Feature-Policy header legacy-image-formats directive controls whether the current document is allowed to display images in legacy formats."
+  },
+  {
+    "title": "Feature-Policy: oversized-images",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/oversized-images",
+    "summary": "The HTTP Feature-Policy header oversized-images directive controls whether the current document is allowed to download and display large images."
+  },
+  {
+    "title": "Feature-Policy: layout-animations",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/layout-animations",
+    "summary": "The HTTP Feature-Policy header layout-animations directive controls whether the current document is allowed to show layout animations."
+  },
+  {
+    "title": "Feature-Policy: usb",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/usb",
+    "summary": "The HTTP Feature-Policy header usb directive controls whether the current document is allowed to use the WebUSB API."
+  },
+  {
+    "title": "Feature-Policy: gamepad",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/gamepad",
+    "summary": "The HTTP Feature-Policy header gamepad directive controls whether the current document is allowed to use the Gamepad API.\n  When this policy is disabled, calls to Navigator.getGamepads() will throw a SecurityError DOMException.\n  In addition, the gamepadconnected and gamepaddisconnected events will not fire."
+  },
+  {
+    "title": "Feature-Policy: unoptimized-images",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/unoptimized-images",
+    "summary": "The HTTP Feature-Policy header unoptimized-images directive controls whether the current document is allowed to download and display unoptimized images."
+  },
+  {
+    "title": "Feature-Policy: magnetometer",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/magnetometer",
+    "summary": "The HTTP Feature-Policy header magnetometer directive controls whether the current document is allowed to gather information about the orientation of the device through the Magnetometer interface."
+  },
+  {
+    "title": "Feature-Policy: unsized-media",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/unsized-media",
+    "summary": "The HTTP Feature-Policy header unsized-media directive controls whether the current document is allowed to change the size of media elements after the initial layout is complete."
+  },
+  {
+    "title": "CSP errors and warnings",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP/Errors",
+    "summary": "When you see any of the following messages logged in the browser devtools console, it indicates that a problem related to CSP has occurred."
+  },
+  {
+    "title": "Network Error Logging",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Network_Error_Logging",
+    "summary": "Network Error Logging is a mechanism that can be configured via the NEL HTTP response header. This experimental header allows web sites and applications to opt-in to receive reports about failed (and, if desired, successful) network fetches from supporting browsers."
+  },
+  {
+    "title": "Resources and URIs",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Resources_and_URIs",
+    "summary": "HTTP allows a browser, or another user agent, to communicate with different resources on the Internet: to do this the browser needs both the identity and the location of the resources. These two bits of information are described by a URI."
+  },
+  {
+    "title": "Resource URLs",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs",
+    "summary": "Resource URLs, URLs prefixed with the resource: scheme, are used by\n  Firefox and Firefox browser extensions to load resources internally, but some of the\n  information is available to sites the browser connects to as well."
+  },
+  {
+    "title": "Configuring servers for Ogg media",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media",
+    "summary": "HTML <audio> and <video> elements allow media presentation without the need for the user to install any plug-ins or other software to do so.\n  This guide covers a few server configuration changes that may be necessary for your web server to correctly serve Ogg media files.\n  This information may also be useful if you encounter other media types your server isn't already configured to recognize."
+  }
+]

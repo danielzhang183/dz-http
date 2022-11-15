@@ -5,13 +5,16 @@
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "fetch": "esno scripts/fetch.ts"
   },
   "dependencies": {
     "@vueuse/core": "^9.4.0",
     "@vueuse/head": "^0.7.13",
     "dayjs": "^1.11.6",
     "nprogress": "^0.2.0",
+    "ohmyfetch": "^0.4.21",
+    "p-limit": "^4.0.0",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6"
   },

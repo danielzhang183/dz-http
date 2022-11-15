@@ -1,7 +1,38 @@
 <script setup lang="ts">
-defineProps<{
-  resources: Record<string, any[]>
+import type { DocItem } from 'types'
+import { resourceIndex } from 'data/resource-index'
+import { capitalize } from '~/logics'
+
+interface ResolveDocItem extends DocItem {
+  icon: string
+}
+
+const props = defineProps<{
+  resources?: Record<string, ResolveDocItem[]>
 }>()
+
+const ICON_MAP: Record<string, string> = {
+  book: 'i-bi-book',
+  video: 'i-ri-movie-line',
+  blog: 'i-fa6-solid-blog',
+}
+
+function normalizeResources(resources: DocItem[]): Record<string, ResolveDocItem[]> {
+  const map: Record<string, ResolveDocItem[]> = {}
+
+  for (const resource of resources) {
+    if (!resource.subType)
+      continue
+    const subType = `${capitalize(resource.subType)}s`
+    if (!map[subType])
+      map[subType] = []
+    map[subType].push(Object.assign(resource, { icon: ICON_MAP[resource.subType] }))
+  }
+
+  return map
+}
+
+const resources = computed(() => props.resources || normalizeResources(resourceIndex.value))
 </script>
 
 <template>
@@ -14,17 +45,17 @@ defineProps<{
         v-for="item, idx in resources[key]"
         :key="idx"
         class="item relative flex items-center"
-        :href="item.link"
+        :href="item.url"
         target="_blank"
-        :class="!item.link ? 'opacity-0 pointer-events-none h-0 -mt-8 -mb-4' : ''"
-        :title="item.name"
+        :class="!item.url ? 'opacity-0 pointer-events-none h-0 -mt-8 -mb-4' : ''"
+        :title="item.title"
       >
         <div v-if="item.icon" class="pt-2 pr-5">
           <div class="text-3xl opacity-50" :class="item.icon || 'i-carbon-unknown'" />
         </div>
         <div class="flex-auto">
-          <div cla ss="text-normal">{{ item.name }}</div>
-          <div class="desc text-sm opacity-50 font-normal" v-html="item.desc" />
+          <div cla ss="text-normal">{{ item.title }}</div>
+          <div class="desc text-sm opacity-50 font-normal" v-html="item.summary" />
         </div>
       </a>
     </div>
