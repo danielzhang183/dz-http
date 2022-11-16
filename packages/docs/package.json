@@ -6,12 +6,14 @@
     "dev": "vite --open",
     "build": "vite build",
     "serve": "vite preview",
+    "prepare": "esno scripts/prepare.ts",
     "fetch": "esno scripts/fetch.ts"
   },
   "dependencies": {
     "@vueuse/core": "^9.4.0",
     "@vueuse/head": "^0.7.13",
     "dayjs": "^1.11.6",
+    "knitwork": "^1.0.0",
     "nprogress": "^0.2.0",
     "ohmyfetch": "^0.4.21",
     "p-limit": "^4.0.0",

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { DocItem } from 'types'
-import { default as resourceIndex } from '../../data/resource-index.json'
+import resourceIndex from '~~/data/resource-index.json'
 import { capitalize } from '~/logics'
 
 interface ResolveDocItem extends DocItem {
@@ -21,12 +21,12 @@ function normalizeResources(resources: DocItem[]): Record<string, ResolveDocItem
   const map: Record<string, ResolveDocItem[]> = {}
 
   for (const resource of resources) {
-    if (!resource.subType)
+    if (!resource.type)
       continue
-    const subType = `${capitalize(resource.subType)}s`
-    if (!map[subType])
-      map[subType] = []
-    map[subType].push(Object.assign(resource, { icon: ICON_MAP[resource.subType] }))
+    const type = `${capitalize(resource.type)}s`
+    if (!map[type])
+      map[type] = []
+    map[type].push(Object.assign(resource, { icon: ICON_MAP[resource.type] }))
   }
 
   return map

@@ -13,14 +13,12 @@ export interface DocItem {
 //   class: string
 //   css?: string
 //   body?: string
-//   context?: RuleContext
-//   colors?: string[]
 //   features?: string[]
 //   layers?: string[]
 // }
 
-export interface SecurityItem {
-  type: 'security'
+export interface GuideItem {
+  type: 'guide'
   name: string
   title: string
   summary?: string
@@ -28,4 +26,4 @@ export interface SecurityItem {
   component: () => Promise<{ default: Component }>
 }
 
-export type ResultItem = DocItem | SecurityItem
+export type ResultItem = DocItem | GuideItem

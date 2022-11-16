@@ -1,63 +1,74 @@
 import Fuse from 'fuse.js'
-import { createAutocomplete } from './autocomplete'
-import type { ResultItem } from './types'
+import type { Ref } from 'vue'
+import { computed } from 'vue'
+import type { DocItem, GuideItem, ResultItem } from './types'
 
-export function createSearch() {
-  const ac = createAutocomplete()
+export interface SearchState {
+  docs: Ref<DocItem[]>
+  resources: Ref<DocItem[]>
+  guides: GuideItem[]
+  limit?: number
+}
 
-  const fuseCollection: ResultItem[] = []
-
-  const fuse = new Fuse<ResultItem>(
-    fuseCollection,
+export function createSearch({ docs, resources, guides, limit = 50 }: SearchState) {
+  const docsFuse = computed(() => new Fuse<ResultItem>(
+    docs.value,
     {
-      keys: [
-
-      ],
+      keys: ['title', 'summary'],
       isCaseSensitive: false,
-      ignoreLocation: true,
-      includeScore: true,
+    },
+  ))
+  const resourcesFuse = computed(() => new Fuse<ResultItem>(
+    resources.value,
+    {
+      keys: ['title', 'summary'],
+      isCaseSensitive: false,
+    },
+  ))
+  const guidesFuse = new Fuse<ResultItem>(
+    guides,
+    {
+      keys: ['title'],
+      isCaseSensitive: false,
     },
   )
 
-  let _fusePrepare: Promise<void> | undefined
   async function search(input: string) {
-    _fusePrepare = _fusePrepare || prepareFuse()
-    await _fusePrepare
-
     input = input.trim()
+
+    // mdn
+    if (input.match(/^mdn:/)) {
+      input = input.slice(4).trim()
+      if (!input)
+        return docs.value.slice(0, limit)
+      return docsFuse.value.search(input, { limit }).map(i => i.item)
+    }
+
+    // guide
+    if (input.match(/^guide:/)) {
+      input = input.slice(6).trim()
+      if (!input)
+        return guides.slice(0, limit)
+      return guidesFuse.search(input, { limit }).map(i => i.item)
+    }
+
+    // resource
+    if (input.match(/^resource:/)) {
+      input = input.slice(9).trim()
+      if (!input)
+        return resources.value.slice(0, limit)
+      return resourcesFuse.value.search(input, { limit }).map(i => i.item)
+    }
 
     return input
   }
 
-  async function prepareFuse() {
-    await Promise.all(Array.from(await enumerateAutocomplete()))
-      // .map(async i => await generateFor(i)) 
-  }
-
-  async function enumerateAutocomplete() {
-    const matched = new Set<string>()
-    const a2z = Array.from('abcdefghijklmnopqrstuvwxyz')
-    const a2zd = [...a2z, '-']
-
-    const keys = a2z.flatMap(i => [
-      i,
-      ...a2zd.map(j => `${i}${j}`),
-    ])
-
-    await Promise.all(keys.map(key =>
-      ac
-        // .suggest(key)
-        // .then(i => i.forEach(j => matched.add(j))),
-    ))
-
-    return matched
-  }
-
-  async function generateFor() {
-
+  function getItemId(item: ResultItem) {
+    return `${item.type}:${item.title}`
   }
 
   return {
     search,
+    getItemId,
   }
 }

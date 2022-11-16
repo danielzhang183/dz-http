@@ -1,19 +1,17 @@
 <script lang="ts" setup>
 import type { Member } from '~/types'
 
-const props = defineProps<{
+defineProps<{
   members?: Member[]
 }>()
 
 const isIcon = (str: string) => str.startsWith('i-')
-console.log(props.members)
 </script>
 
 <template>
-  <div class="member-container">
+  <div v-if="members && members.length" class="member-container">
     <article
       v-for="member in members"
-      v-if="members && members.length"
       :key="member.name"
       flex-col rounded-3 bg-truegray-50 dark:bg-dark-800
     >

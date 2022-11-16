@@ -23,6 +23,7 @@ export default defineConfig({
   resolve: {
     alias: [
       { find: '~/', replacement: `${resolve(__dirname, 'src')}/` },
+      { find: '~~/', replacement: `${resolve(__dirname)}/` },
     ],
   },
   optimizeDeps: {
@@ -99,6 +100,7 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
+        'vue/macros',
         '@vueuse/core',
         '@vueuse/head',
       ],
@@ -109,6 +111,7 @@ export default defineConfig({
       extensions: ['vue', 'md'],
       dts: true,
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      directoryAsNamespace: true,
       resolvers: [
         IconsResolver({
           componentPrefix: '',

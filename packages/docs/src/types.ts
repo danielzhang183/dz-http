@@ -26,7 +26,3 @@ export interface SubNav {
   name: string
   link: string
 }
-
-export interface ResultItem {
-
-}
