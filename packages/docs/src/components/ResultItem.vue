@@ -7,7 +7,6 @@ const { compact = undefined, active } = defineProps<{
   active?: boolean
   compact?: boolean | undefined
 }>()
-
 const el = $ref<HTMLDivElement>()
 const compactMode = $computed(() => compact ?? isCompact.value)
 const badgeStyle = $computed(() => {
@@ -22,13 +21,13 @@ watchEffect(() => {
 })
 </script>
 
+<!-- :class="active ? 'bg-gray5:6' : 'op60 hover:bg-gray5:2 hover:op100'" -->
 <template>
   <div
     ref="el"
     border="l-4 transparent" row gap3
     text-left items-center py2 px3
     cursor-pointer select-none
-    :class="active ? 'bg-gray5:6' : 'op60 hover:bg-gray5:2 hover:op100'"
   >
     <template v-if="'url' in item">
       <div :class="[badgeStyle, item.type === 'resource' ? 'badge-square-orange' : 'badge-square-blue']" title="MDN Docs">

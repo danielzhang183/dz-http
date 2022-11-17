@@ -137,10 +137,12 @@ importers:
 
   packages/search:
     specifiers:
+      '@dz-http/core': workspace:*
       '@vue/reactivity': ^3.2.41
       fuse.js: ^6.6.2
       vue: ^3.2.41
     dependencies:
+      '@dz-http/core': link:../core
       '@vue/reactivity': registry.npmmirror.com/@vue/reactivity/3.2.41
       fuse.js: 6.6.2
       vue: registry.npmmirror.com/vue/3.2.41

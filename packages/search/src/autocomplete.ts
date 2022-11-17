@@ -1,17 +1,13 @@
-export function createAutocomplete() {
+import type { HttpGenerator } from '@dz-http/core'
+
+export function createAutocomplete(http: HttpGenerator) {
   reset()
 
   return {
     suggest,
     suggestInFile,
-    templates,
     cache,
     reset,
-    enumerate,
-  }
-
-  async function enumerate() {
-
   }
 
   async function suggest() {
@@ -27,10 +23,6 @@ export function createAutocomplete() {
   }
 
   function cache() {
-
-  }
-
-  function templates() {
 
   }
 }

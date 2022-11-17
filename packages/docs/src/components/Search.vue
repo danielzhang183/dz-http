@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { input, isMobile, isModalOpen, isSearching, searchResult, searcher, selectIndex } from '~/logics/state'
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+
 import type { ResultItem } from '~~/types'
 
 const route = useRoute()
@@ -111,11 +111,12 @@ function selectItem(item: ResultItem) {
         <div divider />
       </template>
       <template v-for="(i, idx) of searchResult" :key="idx">
-        <ResultItem
+        <!-- {{ idx }} -->
+        <!-- <ResultItem
           :item="i"
           :active="selectIndex === idx"
           @click="selectItem(i)"
-        />
+        /> -->
         <div divider />
       </template>
     </div>

@@ -33,3 +33,7 @@ export interface GuideItem {
 }
 
 export type ResultItem = DocItem | GuideItem
+
+export interface HttpGenerator {
+
+}
