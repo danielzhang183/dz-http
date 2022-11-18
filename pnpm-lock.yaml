@@ -135,16 +135,24 @@ importers:
       vite-ssg-sitemap: 0.3.2
       vite-svg-loader: 3.6.0
 
+  packages/http:
+    specifiers:
+      '@dz-http/core': workspace:*
+    dependencies:
+      '@dz-http/core': link:../core
+
   packages/search:
     specifiers:
       '@dz-http/core': workspace:*
       '@vue/reactivity': ^3.2.41
       fuse.js: ^6.6.2
+      lru-cache: ^7.14.1
       vue: ^3.2.41
     dependencies:
       '@dz-http/core': link:../core
       '@vue/reactivity': registry.npmmirror.com/@vue/reactivity/3.2.41
       fuse.js: 6.6.2
+      lru-cache: registry.npmmirror.com/lru-cache/7.14.1
       vue: registry.npmmirror.com/vue/3.2.41
 
 packages:
@@ -5948,6 +5956,13 @@ packages:
     resolution: {integrity: sha512-dWl0Dbjm6Xm+kDxhPQJsCBTxrJzuGl0aP9rhr+TG8D3l+GL90N8O8lYUi7dTSAN2uuDqCtNgb6aEuQH5wsiV8Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/knitwork/-/knitwork-1.0.0.tgz}
     name: knitwork
     version: 1.0.0
+    dev: false
+
+  registry.npmmirror.com/lru-cache/7.14.1:
+    resolution: {integrity: sha512-ysxwsnTKdAx96aTRdhDOCQfDgbHnt8SK0KY8SEjO0wHinhWOFTESbjVCMPbU1uGXg/ch4lifqx0wfjOawU2+WA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lru-cache/-/lru-cache-7.14.1.tgz}
+    name: lru-cache
+    version: 7.14.1
+    engines: {node: '>=12'}
     dev: false
 
   registry.npmmirror.com/magic-string/0.25.9:

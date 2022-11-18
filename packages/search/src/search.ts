@@ -2,8 +2,9 @@ import Fuse from 'fuse.js'
 import type { Ref } from 'vue'
 import { computed } from 'vue'
 import { notNull, uniq } from '@dz-http/core'
+import type { HttpGenerator } from '@dz-http/core'
 import { createAutocomplete } from './autocomplete'
-import type { DocItem, GuideItem, HttpGenerator, ResultItem } from './types'
+import type { DocItem, GuideItem, ResultItem } from './types'
 
 export interface SearchState {
   http: HttpGenerator

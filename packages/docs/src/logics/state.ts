@@ -1,5 +1,6 @@
 // import { URLSearchParams } from 'url'
 import { breakpointsTailwind } from '@vueuse/core'
+import { createGenerator } from '@dz-http/core'
 import { createSearch } from '@dz-http/search'
 import type { ResultItem } from 'types'
 import { guideIndex as guides } from '~~/data/guide-index'
@@ -9,6 +10,7 @@ import { mdnIndex as docs } from '~~/data/mdn-index'
 export const isCompact = useLocalStorage('http-interactive-compact', false)
 export const toggleCompact = useToggle(isCompact)
 
+export const http = createGenerator({}, defaultConfig)
 export const searcher = createSearch({ docs, guides, resources })
 
 // const initParams = new URLSearchParams(location.search)
