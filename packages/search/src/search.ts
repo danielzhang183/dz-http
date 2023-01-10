@@ -4,7 +4,7 @@ import { computed } from 'vue'
 import { notNull, uniq } from '@dz-http/core'
 import type { HttpGenerator } from '@dz-http/core'
 import { createAutocomplete } from './autocomplete'
-import type { DocItem, GuideItem, ResultItem } from './types'
+import type { DocItem, GuideItem, ResultItem, RuleItem } from './types'
 
 export interface SearchState {
   http: HttpGenerator
@@ -16,7 +16,8 @@ export interface SearchState {
 
 export function createSearch({ http, docs, resources, guides, limit = 50 }: SearchState) {
   const ac = createAutocomplete(http)
-  // const matchedMap = reactive(new Map<string, RuleItem>())
+  const matchedMap = reactive(new Map<string, RuleItem>())
+  const featuresMap = reactive(new Map<string, Set<RuleItem>>())
   let fuseCollection: ResultItem[] = []
 
   const fuse = new Fuse<ResultItem>(
@@ -133,7 +134,35 @@ export function createSearch({ http, docs, resources, guides, limit = 50 }: Sear
 
   // === core search function ===
   async function _generateFor(input: string) {
+    if (matchedMap.has(input))
+      return matchedMap.get(input)
 
+    const token = await http.parseToken(input)
+    if (!token?.length)
+      return
+    const features = getFeatureUsage()
+
+    matchedMap.set(input, {})
+    const item = matchedMap.get(input)!
+
+    features.forEach((i) => {
+      if (!featuresMap.has(i))
+        featuresMap.set(i, new Set())
+      featuresMap.get(i)!.add(item)
+    })
+
+    if (!fuseCollection.includes(item))
+      fuse.add(item)
+
+    return item
+  }
+
+  function getFeatureUsage(input: string) {
+    const codes = uniq([...input.matchAll(/^\s+(\d+)/mg)].map(i => i[1]))
+    const portocals = uniq([...input.matchAll(/\b(\w+)\(/mg)].map(i => `${i[1]}()`))
+    const headers = uniq([...input.matchAll(/\:([\w-]+)/mg)].map(i => `:${i[1]}`))
+    return [...codes, ...portocals, ...headers]
+      .filter(i => docs.value.find(s => s.title === i))
   }
 
   function getItemId(item: ResultItem) {
@@ -145,6 +174,9 @@ export function createSearch({ http, docs, resources, guides, limit = 50 }: Sear
   }
 
   function reset() {
+    matchedMap.clear()
+    featuresMap.clear()
+    ac.reset()
     _generatePromiseMap.clear()
     fuseCollection = [...guides, ...docs.value, ...resources.value]
     fuse.setCollection(fuseCollection)

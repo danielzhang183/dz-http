@@ -10,6 +10,14 @@ export interface DocItem {
   subType?: string
 }
 
+export interface RuleItem {
+  type: 'rule'
+  title: string
+  body: string
+  features?: string[]
+  urls?: string[]
+}
+
 export type HeaderCategory = 'common' | 'entity' | 'request' | 'respone'
 
 export interface HeaderItem {
@@ -34,7 +42,7 @@ export interface GuideItem {
   component: () => Promise<{ default: Component }>
 }
 
-export type ResultItem = DocItem | GuideItem
+export type ResultItem = DocItem | RuleItem | GuideItem
 
 export type AutocompleteTemplatePart = AutocompleteTemplateStatic | AutocompleteTemplateGroup | AutocompleteTemplateTheme
 

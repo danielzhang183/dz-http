@@ -58,7 +58,9 @@ export function createAutocomplete(http: HttpGenerator): HttpAutocomplete {
   }
 
   async function suggestHttpCache(input: string) {
-
+    // @ts-expect-error private
+    const keys = Array.from(http._cache.entries())
+    return keys.filter(i => i[1] && i[0].startsWith(input)).map(i => i[0])
   }
 
   async function suggestPost(input: string) {

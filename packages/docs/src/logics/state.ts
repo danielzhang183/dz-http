@@ -6,6 +6,7 @@ import type { ResultItem } from 'types'
 import { guideIndex as guides } from '~~/data/guide-index'
 import { resourceIndex as resources } from '~~/data/resource-index'
 import { mdnIndex as docs } from '~~/data/mdn-index'
+import { defaultConfig } from '~~/http.config'
 
 export const isCompact = useLocalStorage('http-interactive-compact', false)
 export const toggleCompact = useToggle(isCompact)
